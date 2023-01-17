@@ -1,5 +1,3 @@
-console.log("Hello world");
-
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
 
@@ -14,6 +12,7 @@ btn.addEventListener("click", function () {
   }
 });
 
+/*
 let votesInteresting = 23;
 let votesMindBlowing = 5;
 const text = "Lisbon is the capital of Portugal";
@@ -29,11 +28,35 @@ let votesFalse = 4;
 const isCorrect = votesFalse < totalUpvotes;
 console.log(isCorrect);
 
+*/
+
 function calcFactAge(year) {
   const currentYear = new Date().getFullYear();
   const age = currentYear - year;
-  return age;
+
+  if (age >= 0) return age;
+  else return "Impossible year!";
 }
 
 const age1 = calcFactAge(2015);
 console.log(age1);
+console.log(calcFactAge(2020));
+console.log(calcFactAge(1990));
+console.log(calcFactAge(2031));
+
+let votesInteresting = 20;
+let votesMindBlowing = 0;
+
+if (votesInteresting === votesMindBlowing) {
+  alert("This fact is equally interesting and mind blowing");
+} else if (votesInteresting > votesMindBlowing) {
+  console.log("Interesting fact!");
+} else if (votesInteresting < votesMindBlowing) {
+  console.log("Mindblowing fact!!");
+}
+
+if (votesMindBlowing) {
+  console.log("MINDBLOWING FACT!!!");
+} else {
+  console.log("Not so interesting");
+}
