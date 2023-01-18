@@ -27,7 +27,6 @@ console.log("Upvotes:", totalUpvotes);
 let votesFalse = 4;
 const isCorrect = votesFalse < totalUpvotes;
 console.log(isCorrect);
-
 */
 
 function calcFactAge(year) {
@@ -60,3 +59,13 @@ if (votesMindBlowing) {
 } else {
   console.log("Not so interesting");
 }
+
+let votesFalse = 77;
+const totalUpvotes = votesInteresting + votesMindBlowing;
+
+const message =
+  totalUpvotes > votesFalse
+    ? "The fact is true"
+    : "Might be false, Check more sources...";
+
+alert(message);
