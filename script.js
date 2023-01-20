@@ -41,8 +41,16 @@ const age1 = calcFactAge(2015);
 console.log(age1);
 console.log(calcFactAge(2020));
 console.log(calcFactAge(1990));
-console.log(calcFactAge(2031));
 
+const calcFactAge2 = (year) =>
+  year <= new Date().getFullYear()
+    ? new Date().getFullYear() - year
+    : `Impossible year. Year needs to be less or equal ${new Date().getFullYear()}.`;
+
+console.log(calcFactAge2(2015));
+console.log(calcFactAge2(2037));
+
+/*
 let votesInteresting = 20;
 let votesMindBlowing = 0;
 
@@ -80,3 +88,5 @@ const str = `"The current fact is "${text}". It is ${calcFactAge(
   totalUpvotes > votesFalse ? "correct" : "not true"
 }.`;
 console.log(str);
+
+*/
