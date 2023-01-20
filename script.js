@@ -34,7 +34,7 @@ function calcFactAge(year) {
   const age = currentYear - year;
 
   if (age >= 0) return age;
-  else return "Impossible year!";
+  else return `Impossible year. Year needs to be less or equal ${currentYear}`;
 }
 
 const age1 = calcFactAge(2015);
@@ -68,4 +68,15 @@ const message =
     ? "The fact is true"
     : "Might be false, Check more sources...";
 
-alert(message);
+// alert(message);
+
+const text = "Lisbon is the capital of Portugal";
+const upperText = text.toUpperCase();
+console.log(upperText);
+
+const str = `"The current fact is "${text}". It is ${calcFactAge(
+  2015
+)} years old. It is probably ${
+  totalUpvotes > votesFalse ? "correct" : "not true"
+}.`;
+console.log(str);
