@@ -90,3 +90,17 @@ const str = `"The current fact is "${text}". It is ${calcFactAge(
 console.log(str);
 
 */
+
+const fact = ["Lisbon is the capital of Portugal", 2015, true];
+console.log(fact);
+console.log(fact[2]);
+console.log(fact.length);
+console.log(fact[fact.length - 1]);
+
+// Desctructuring
+const [text, createdIn] = fact;
+console.log(text, createdIn);
+
+// Spreading
+const newFact = [...fact, "society"];
+console.log(newFact);
