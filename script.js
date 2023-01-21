@@ -104,3 +104,23 @@ console.log(text, createdIn);
 // Spreading
 const newFact = [...fact, "society"];
 console.log(newFact);
+
+// Object
+const factObj = {
+  text: "Lisbon is the capital of Portugal",
+  category: "Society",
+  createdIn: 2015,
+  isCorrect: true,
+  createSummary: function () {
+    return `The fact "${
+      this.text
+    }" is from the catergory ${this.category.toUpperCase()}`;
+  },
+};
+
+console.log(factObj.text);
+console.log(factObj["text"]);
+
+const { category, isCorrect } = factObj;
+console.log(category);
+console.log(factObj.createSummary());
