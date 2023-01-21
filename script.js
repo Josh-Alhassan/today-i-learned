@@ -1,5 +1,8 @@
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
+const factsList = document.querySelector(".facts-list");
+
+factsList.innerHTML = "";
 
 btn.addEventListener("click", function () {
   console.log("CLICKED");
@@ -91,6 +94,7 @@ console.log(str);
 
 */
 
+/*
 const fact = ["Lisbon is the capital of Portugal", 2015, true];
 console.log(fact);
 console.log(fact[2]);
@@ -180,3 +184,4 @@ const initialFacts = [
 const factAges = initialFacts.map((el) => calcFactAge(el.createdIn));
 console.log(factAges);
 console.log(factAges.join("-"));
+*/
