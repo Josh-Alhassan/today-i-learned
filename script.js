@@ -70,7 +70,9 @@ async function loadFacts() {
     }
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
+  // const filteredData = data.filter((fact) => fact.category === "society");
+
   createFactsList(data);
 }
 
@@ -87,7 +89,9 @@ function createFactsList(dataArray) {
           >(Source)</a
         >
       </p>
-      <span class="tag" style="background-color: #3b82f6"
+      <span class="tag" style="background-color: ${
+        CATEGORIES.find((cat) => cat.name === fact.category).color
+      }"
         >${fact.category}</span
       >
     </li>`
@@ -147,8 +151,8 @@ const calcFactAge2 = (year) =>
     ? new Date().getFullYear() - year
     : `Impossible year. Year needs to be less or equal ${new Date().getFullYear()}.`;
 
-console.log(calcFactAge2(2015));
-console.log(calcFactAge2(2037));
+// console.log(calcFactAge2(2015));
+// console.log(calcFactAge2(2037));
 
 /*
 let votesInteresting = 20;
